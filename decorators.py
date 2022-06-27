@@ -1,3 +1,4 @@
+import logging
 import time
 from functools import cmp_to_key
 
@@ -78,3 +79,15 @@ def cmp_cached(cmp):
 @cmp_cached(cmp)
 def sum3(a, b, c):
     return a * 100 + b * 10 + c
+
+
+def param_decorator(*args):
+    def decorator(func):
+        def wrapper():
+            try:
+                return func()
+            except args:
+                logging.exception("Exception")
+
+        return wrapper
+    return decorator
