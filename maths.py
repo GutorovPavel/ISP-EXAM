@@ -48,6 +48,14 @@ def reversed_polish_notation(expr):
 
 ############# Баланс скобок ##############
 
+"""  Если кортеж
+t = (a, b, c)
+s = str()
+
+for i in t:
+    s ++ i
+"""
+
 """
 string = input()
 arr = []
